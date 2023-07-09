@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineDelete, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 export default function CartProducts({ item, value }) {
-  const { id, title, img, price, count, total } = item;
+  const { id, title, img, price, count } = item;
   const { increamentCart, decreamentCart, deleteItem } = value;
   return (
     <>

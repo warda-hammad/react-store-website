@@ -1,10 +1,7 @@
-import { Component } from "react";
 import "./home-section.css";
-import { React, useContext } from "react";
+import { React } from "react";
 import { ProductConsumer } from "./context";
 import { Link } from "react-router-dom";
-// import { itemDetail } from "../data";
-import ProductsList from "./productsList";
 
 export default function ItemDetails() {
   return (
