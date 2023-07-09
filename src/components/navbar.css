@@ -1,0 +1,230 @@
+:root {
+  --main-color: #d33b33;
+  --light-color: #f5f5f5;
+  --black-color: #010101;
+  --white-color: #ffffdb;
+  --gray-color: #2c2c2c;
+  --sale-color: #ff0000;
+  --background-color: #dddddd70;
+}
+.nav {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  padding: 0.6rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.link {
+  text-decoration: none;
+  color: var(--black-color);
+}
+.nav-ul .link:hover {
+  color: var(--main-color);
+}
+.nav-ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-ul li {
+  cursor: pointer;
+  padding: 0.7rem 0.4rem;
+  margin: 0 1rem;
+  transition: 0.5s;
+}
+.menu {
+  display: none;
+}
+
+.logo {
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  width: 20%;
+  margin: 0 auto;
+  text-decoration: none;
+}
+.logo span {
+  width: fit-content;
+  cursor: pointer;
+  color: var(--main-color);
+}
+.logo span .logo-icon {
+  margin-bottom: -4px;
+}
+
+@media (max-width: 898px) {
+  .nav {
+    width: 95%;
+  }
+  .display {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .nav-ul {
+    flex-direction: column;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    padding-top: 1%;
+    z-index: 3;
+    justify-content: space-between;
+    background-color: var(--light-color);
+  }
+  .nav-ul li {
+    width: fit-content;
+    text-align: center;
+    padding: 1% 2%;
+    margin: 2% 41%;
+  }
+  .nav-ul .search-li {
+    padding: 0;
+    margin: 0;
+  }
+  .nav-ul .search {
+    position: absolute;
+    top: 20px;
+    right: 15%;
+  }
+  .menu {
+    display: block;
+    width: fit-content;
+    align-self: end;
+    margin: 9px;
+    text-align: right;
+    z-index: 999;
+    position: absolute;
+    right: 7px;
+  }
+  .nav-ul .menu {
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 10px;
+  }
+  .logo {
+    width: 50%;
+    margin: 0;
+  }
+}
+@media (max-width: 498px) {
+  .nav-ul .menu {
+    margin-top: 10px;
+  }
+}
+
+.cart {
+  background: var(--background-color);
+  padding: 3% 5%;
+}
+.cartHeader {
+  text-align: center;
+  color: var(--main-color);
+}
+.container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+.productCartInfo {
+  width: 40%;
+  margin: 2rem auto;
+}
+.productCartInfo .img {
+  height: 250px;
+}
+.productCartInfo .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btnAmount {
+  width: 40%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.btnAmount button,
+.clearCart {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: var(--black-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+.clearCart {
+  border: 1px solid var(--main-color);
+  border-radius: 0.6rem;
+  padding: 0.4rem;
+  background-color: var(--light-color);
+  color: var(--gray-color);
+  font-size: 15px;
+}
+.clearCart span {
+  margin: 0.4rem;
+}
+.btnAmount button:hover,
+.clearCart:hover {
+  color: var(--main-color);
+}
+.btnAmount .increament,
+.btnAmount .decreament {
+  padding: 0.7rem;
+  background-color: var(--light-color);
+}
+.btnAmount .amount {
+  padding: 0.7rem;
+}
+.delete {
+  position: relative;
+}
+.delete span {
+  color: #b5acacc2;
+  position: absolute;
+  display: none;
+  font-size: 16px;
+}
+.delete button:hover span {
+  display: block;
+}
+.total {
+  text-align: right;
+  margin: 2rem 5rem;
+}
+
+@media (max-width: 799px) {
+  .clearCart {
+    top: 20%;
+  }
+  .productCartInfo {
+    width: 65%;
+  }
+  .btnAmount {
+    width: 100%;
+  }
+}
+@media (max-width: 599px) {
+  .container {
+    width: 100%;
+  }
+  .productCartInfo {
+    width: 95%;
+  }
+  .btnAmount {
+    justify-content: space-between;
+  }
+  .clearCart {
+    top: 15%;
+  }
+}
+
+.empty {
+  text-align: center;
+  font-size: 24px;
+  margin: 2rem auto;
+  color: var(--main-color);
+}
