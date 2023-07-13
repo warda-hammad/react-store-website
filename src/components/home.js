@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./home-section.css";
 import BackGround from "../images/background.jpg";
 import ProductsList from "./productsList";
@@ -17,7 +17,9 @@ export default function Home() {
     <>
       <div className="home-section">
         <div className="background">
-          <img src={BackGround} alt="BackGround" />
+          <div className="img">
+            <img src={BackGround} alt="BackGround" />
+          </div>
           <div className="overlay"></div>
         </div>
         <div className="info">
